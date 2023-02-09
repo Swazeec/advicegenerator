@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online version: https://small-advice-generator.netlify.app/
 
 ## Available Scripts
 
