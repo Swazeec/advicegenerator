@@ -13,9 +13,10 @@ const Advice = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     const url = 'https://api.adviceslip.com/advice'
+    let randomId = '/'+Math.floor(Math.random()*223)
 
-    const fetchAdvice = async ()=>{
-        const response = await fetch(url)
+    const fetchAdvice = async (id='')=>{
+        const response = await fetch(url+id)
         if(!response.ok){
             setError(true)
         }
@@ -27,8 +28,9 @@ const Advice = () => {
     useEffect(()=>{
         fetchAdvice()
     },[]) 
+
     const clickHandler = () => {
-        fetchAdvice()
+        fetchAdvice(randomId)
     }
 
     if(error){
